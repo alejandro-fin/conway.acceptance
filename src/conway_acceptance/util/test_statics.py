@@ -7,6 +7,15 @@ class TestStatics():
         as a way to use consistent strings when they reference a named domain structural element.
         '''
 
+    SCENARIOS_REPO                                              = "SCENARIOS_REPO"  
+    '''
+    Denotes an environment variable that points to the root folder under which all the test scenarios reside
+    for a particular Conway-based application.
+
+    This is a root directory that then breaks into sub-folders by ``scenario_id``, each of which is a test database for
+    the scenario denoted by that ``scenario_id``.
+    ''' 
+
     SEED_FOLDER                                                 = "SEED"
 
     # These are used to create the root folders of the test database used by the test cases.
