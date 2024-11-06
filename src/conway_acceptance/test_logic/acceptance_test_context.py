@@ -1,6 +1,5 @@
 import abc
 
-from conway.application.application                        import Application
 from conway.observability.logger                           import Logger
 
 class AcceptanceTestContext(abc.ABC):
@@ -46,9 +45,8 @@ class AcceptanceTestContext(abc.ABC):
         self.seeding_round                                          = seeding_round
         self.test_database                                          = None
 
-        Application.app().log("--------- Starting Test Scenario " + str(scenario_id) 
+        Logger.log_info("--------- Starting Test Scenario " + str(scenario_id) 
                               + " [round=" + str(seeding_round) + "] ---------", 
-                              log_level                             = Logger.LEVEL_INFO,
                               stack_level_increase                  = 2)
 
         
